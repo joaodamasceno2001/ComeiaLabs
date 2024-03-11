@@ -1,6 +1,5 @@
 package com.comeia.comeialabs.modules.products.entities;
 
-import com.comeia.comeialabs.modules.sales.entities.Sale;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

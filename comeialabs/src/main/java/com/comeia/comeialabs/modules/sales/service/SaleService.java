@@ -5,7 +5,6 @@ import com.comeia.comeialabs.modules.products.entities.ProductAcquisition;
 import com.comeia.comeialabs.modules.products.service.ProductService;
 import com.comeia.comeialabs.modules.sales.entities.Sale;
 import com.comeia.comeialabs.modules.sales.repositories.SaleRepository;
-import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
