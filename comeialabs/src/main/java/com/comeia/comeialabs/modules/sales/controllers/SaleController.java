@@ -22,6 +22,7 @@ public class SaleController {
     private SaleService saleService;
 
     @GetMapping
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<List<Sale>> listSales(){
         List<Sale> sales = saleService.listSales();
 
@@ -33,6 +34,7 @@ public class SaleController {
     }
 
     @PutMapping(value = "/{id}")
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<Sale> updateSale(@PathVariable Long id, @RequestBody Sale saleUpdated){
 
         try {
@@ -46,6 +48,7 @@ public class SaleController {
     }
 
     @PostMapping
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<Sale> createSale(@RequestBody Sale sale){
         try {
             Sale newSale = saleService.createSale(sale);
@@ -57,12 +60,14 @@ public class SaleController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<Sale> getSale(@PathVariable Long id){
 
         try {
             Sale sale = saleService.getSale(id);
             return new ResponseEntity<>(sale, HttpStatus.OK);
         } catch(Exception e) {
+            log.error(e.getMessage());
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
@@ -74,6 +79,7 @@ public class SaleController {
             saleService.deleteSale(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
+            log.error(e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

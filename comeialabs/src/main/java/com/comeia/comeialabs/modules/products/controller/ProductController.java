@@ -2,6 +2,7 @@ package com.comeia.comeialabs.modules.products.controller;
 
 import com.comeia.comeialabs.modules.products.entities.Product;
 import com.comeia.comeialabs.modules.products.service.ProductService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/products")
+@Slf4j
 public class ProductController {
 
     @Autowired
@@ -37,6 +39,7 @@ public class ProductController {
             Product Product = productService.updateProduct(id, ProductUpdated);
             return new ResponseEntity<>(Product, HttpStatus.OK);
         } catch (Exception e) {
+            log.error(e.getMessage());
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
@@ -49,6 +52,7 @@ public class ProductController {
             Product newProduct = productService.createProduct(Product);
             return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
         } catch (Exception e) {
+            log.error(e.getMessage());
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
@@ -61,6 +65,7 @@ public class ProductController {
             Product Product = productService.getProduct(id);
             return new ResponseEntity<>(Product, HttpStatus.OK);
         } catch(Exception e) {
+            log.error(e.getMessage());
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
@@ -72,6 +77,7 @@ public class ProductController {
             productService.deleteProduct(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
+            log.error(e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

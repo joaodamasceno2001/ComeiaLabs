@@ -1,0 +1,488 @@
+{
+	"info": {
+		"_postman_id": "6215e827-8138-470d-a7d2-e55a83c761a8",
+		"name": "ComeiaLabs - Vendas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30368521"
+	},
+	"item": [
+		{
+			"name": "V1",
+			"item": [
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "List Products",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1RElsMXhhVkNyVUw4N2p3ZmdhTmFFVldjM3FpN3FWRmcyNnZzb2JxWDhRIn0.eyJleHAiOjE3MTAxOTE1MDMsImlhdCI6MTcxMDE5MTIwMywianRpIjoiMmJmN2E0YjMtMDBiNC00YWNiLThmMWEtZDA4YzJlMzQ2NDI0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9jb21laWEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNGYyNDNkMzctZDIxOC00YTVmLThmZjAtMGJmYzgxZjg5MTIxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBwX2NvbWVpYSIsInNlc3Npb25fc3RhdGUiOiI3N2FlMGYzYS01OWE4LTQyOTYtYTlhMi1kNjM1N2RjMjA5MTMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY29tZWlhIiwidW1hX2F1dGhvcml6YXRpb24iLCJVU0VSIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiNzdhZTBmM2EtNTlhOC00Mjk2LWE5YTItZDYzNTdkYzIwOTEzIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiVXNlciBDb21laWEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyX2NvbWVpYSIsImdpdmVuX25hbWUiOiJVc2VyIiwiZmFtaWx5X25hbWUiOiJDb21laWEiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIn0.bCkfI5dyRQZKMUWFMcMgONNTLwUyT_dHKLG-nCsVzfhNeq8nxz6bJpjjI_ZasZYoRWXQExCkgvxpVSBYi7AeakQnlc77CKVrie1BRC2mX4f0obdBNBPQj-9mhaZLPSAJZSI9MIz2DRAKGAfRa6-Lv2rVGJAoabFgHAYO_1tu0izspeoGWDtX9f5CxOOl-MjqY779m5BP_ZJul0muqTs582TM3e3_3lRNMjwGk29EHPJBT337SlWkZaj8h1OZ4VVoyvxf22w2IJa6mrZ_rnLt11OPPibFp6NoiyAL_BGN3fq-9k8MTdmsKU70fxfCxXkTT5v-4y8xCBzMpEIpDbI3Ig",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Backend_url}}/api/v1/products",
+									"host": [
+										"{{Backend_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1RElsMXhhVkNyVUw4N2p3ZmdhTmFFVldjM3FpN3FWRmcyNnZzb2JxWDhRIn0.eyJleHAiOjE3MTAxOTE1MDMsImlhdCI6MTcxMDE5MTIwMywianRpIjoiMmJmN2E0YjMtMDBiNC00YWNiLThmMWEtZDA4YzJlMzQ2NDI0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9jb21laWEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNGYyNDNkMzctZDIxOC00YTVmLThmZjAtMGJmYzgxZjg5MTIxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBwX2NvbWVpYSIsInNlc3Npb25fc3RhdGUiOiI3N2FlMGYzYS01OWE4LTQyOTYtYTlhMi1kNjM1N2RjMjA5MTMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY29tZWlhIiwidW1hX2F1dGhvcml6YXRpb24iLCJVU0VSIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiNzdhZTBmM2EtNTlhOC00Mjk2LWE5YTItZDYzNTdkYzIwOTEzIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiVXNlciBDb21laWEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyX2NvbWVpYSIsImdpdmVuX25hbWUiOiJVc2VyIiwiZmFtaWx5X25hbWUiOiJDb21laWEiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIn0.bCkfI5dyRQZKMUWFMcMgONNTLwUyT_dHKLG-nCsVzfhNeq8nxz6bJpjjI_ZasZYoRWXQExCkgvxpVSBYi7AeakQnlc77CKVrie1BRC2mX4f0obdBNBPQj-9mhaZLPSAJZSI9MIz2DRAKGAfRa6-Lv2rVGJAoabFgHAYO_1tu0izspeoGWDtX9f5CxOOl-MjqY779m5BP_ZJul0muqTs582TM3e3_3lRNMjwGk29EHPJBT337SlWkZaj8h1OZ4VVoyvxf22w2IJa6mrZ_rnLt11OPPibFp6NoiyAL_BGN3fq-9k8MTdmsKU70fxfCxXkTT5v-4y8xCBzMpEIpDbI3Ig",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"asdfasdf\",\r\n    \"price\": 112312\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Backend_url}}/api/v1/products",
+									"host": [
+										"{{Backend_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1RElsMXhhVkNyVUw4N2p3ZmdhTmFFVldjM3FpN3FWRmcyNnZzb2JxWDhRIn0.eyJleHAiOjE3MTAxOTE1MDMsImlhdCI6MTcxMDE5MTIwMywianRpIjoiMmJmN2E0YjMtMDBiNC00YWNiLThmMWEtZDA4YzJlMzQ2NDI0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9jb21laWEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNGYyNDNkMzctZDIxOC00YTVmLThmZjAtMGJmYzgxZjg5MTIxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBwX2NvbWVpYSIsInNlc3Npb25fc3RhdGUiOiI3N2FlMGYzYS01OWE4LTQyOTYtYTlhMi1kNjM1N2RjMjA5MTMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY29tZWlhIiwidW1hX2F1dGhvcml6YXRpb24iLCJVU0VSIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiNzdhZTBmM2EtNTlhOC00Mjk2LWE5YTItZDYzNTdkYzIwOTEzIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiVXNlciBDb21laWEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyX2NvbWVpYSIsImdpdmVuX25hbWUiOiJVc2VyIiwiZmFtaWx5X25hbWUiOiJDb21laWEiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIn0.bCkfI5dyRQZKMUWFMcMgONNTLwUyT_dHKLG-nCsVzfhNeq8nxz6bJpjjI_ZasZYoRWXQExCkgvxpVSBYi7AeakQnlc77CKVrie1BRC2mX4f0obdBNBPQj-9mhaZLPSAJZSI9MIz2DRAKGAfRa6-Lv2rVGJAoabFgHAYO_1tu0izspeoGWDtX9f5CxOOl-MjqY779m5BP_ZJul0muqTs582TM3e3_3lRNMjwGk29EHPJBT337SlWkZaj8h1OZ4VVoyvxf22w2IJa6mrZ_rnLt11OPPibFp6NoiyAL_BGN3fq-9k8MTdmsKU70fxfCxXkTT5v-4y8xCBzMpEIpDbI3Ig",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"asdfasd\",\r\n    \"price\": 123123\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Backend_url}}/api/v1/products/1",
+									"host": [
+										"{{Backend_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1RElsMXhhVkNyVUw4N2p3ZmdhTmFFVldjM3FpN3FWRmcyNnZzb2JxWDhRIn0.eyJleHAiOjE3MTAxOTE1OTcsImlhdCI6MTcxMDE5MTI5NywianRpIjoiMWVmNDM0YWUtMTI0Yy00ZjE2LWFmYWEtNjdkNDc5ZmQxMTJjIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9jb21laWEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiM2EyNDUzNTgtM2Y0Ni00NTFhLWFmMGEtNjQ5NzQxYmJhNjAyIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBwX2NvbWVpYSIsInNlc3Npb25fc3RhdGUiOiI5OThlMWI5Ni0wMDdmLTQ2ODQtYmQ4Mi03MzZmNWI0YjQ3MTYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY29tZWlhIiwidW1hX2F1dGhvcml6YXRpb24iLCJBRE1JTiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijk5OGUxYjk2LTAwN2YtNDY4NC1iZDgyLTczNmY1YjRiNDcxNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkFkbWluIENvbWVpYSIsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluX2NvbWVpYSIsImdpdmVuX25hbWUiOiJBZG1pbiIsImZhbWlseV9uYW1lIjoiQ29tZWlhIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20ifQ.K8eXqqu6DRLrXlET_sJCZGZDBPm2Dyey7lg0SjoRAVRxssez0eOobvOp6aO4yFFvV4g4S8RJGI1wGsqmbsOTU_jwAkw2-4JuAVUXfXlIYaV46H4j09LfR7Yo9DQUd1L_9hSW0qE7n_PmMjolkAFtXRm-WOrLf0aKyDVMqO-GG5XljPDGxCTJMNmGJAczP2iknH5zvzDFwTItuYr_K4WmQiZ95p46LZESFn5ps8YpuZyRiWA2bm-78w_6fEAPiR-oGY5L9R4ediJt-Q7UaQyHGmGONF8mX0CHNWm_6AZGwffhRlGQ7pY9_l8IWUurHgoyteXMmvd0XnhVVQtg8cxvkg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Backend_url}}/api/v1/products/1",
+									"host": [
+										"{{Backend_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sales",
+					"item": [
+						{
+							"name": "List Sales",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1RElsMXhhVkNyVUw4N2p3ZmdhTmFFVldjM3FpN3FWRmcyNnZzb2JxWDhRIn0.eyJleHAiOjE3MTAxOTE1MDMsImlhdCI6MTcxMDE5MTIwMywianRpIjoiMmJmN2E0YjMtMDBiNC00YWNiLThmMWEtZDA4YzJlMzQ2NDI0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9jb21laWEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNGYyNDNkMzctZDIxOC00YTVmLThmZjAtMGJmYzgxZjg5MTIxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBwX2NvbWVpYSIsInNlc3Npb25fc3RhdGUiOiI3N2FlMGYzYS01OWE4LTQyOTYtYTlhMi1kNjM1N2RjMjA5MTMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY29tZWlhIiwidW1hX2F1dGhvcml6YXRpb24iLCJVU0VSIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiNzdhZTBmM2EtNTlhOC00Mjk2LWE5YTItZDYzNTdkYzIwOTEzIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiVXNlciBDb21laWEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyX2NvbWVpYSIsImdpdmVuX25hbWUiOiJVc2VyIiwiZmFtaWx5X25hbWUiOiJDb21laWEiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIn0.bCkfI5dyRQZKMUWFMcMgONNTLwUyT_dHKLG-nCsVzfhNeq8nxz6bJpjjI_ZasZYoRWXQExCkgvxpVSBYi7AeakQnlc77CKVrie1BRC2mX4f0obdBNBPQj-9mhaZLPSAJZSI9MIz2DRAKGAfRa6-Lv2rVGJAoabFgHAYO_1tu0izspeoGWDtX9f5CxOOl-MjqY779m5BP_ZJul0muqTs582TM3e3_3lRNMjwGk29EHPJBT337SlWkZaj8h1OZ4VVoyvxf22w2IJa6mrZ_rnLt11OPPibFp6NoiyAL_BGN3fq-9k8MTdmsKU70fxfCxXkTT5v-4y8xCBzMpEIpDbI3Ig",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{Backend_url}}/api/v1/sales",
+									"host": [
+										"{{Backend_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sales"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Sales",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1RElsMXhhVkNyVUw4N2p3ZmdhTmFFVldjM3FpN3FWRmcyNnZzb2JxWDhRIn0.eyJleHAiOjE3MTAxOTE1MDMsImlhdCI6MTcxMDE5MTIwMywianRpIjoiMmJmN2E0YjMtMDBiNC00YWNiLThmMWEtZDA4YzJlMzQ2NDI0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9jb21laWEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNGYyNDNkMzctZDIxOC00YTVmLThmZjAtMGJmYzgxZjg5MTIxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBwX2NvbWVpYSIsInNlc3Npb25fc3RhdGUiOiI3N2FlMGYzYS01OWE4LTQyOTYtYTlhMi1kNjM1N2RjMjA5MTMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY29tZWlhIiwidW1hX2F1dGhvcml6YXRpb24iLCJVU0VSIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiNzdhZTBmM2EtNTlhOC00Mjk2LWE5YTItZDYzNTdkYzIwOTEzIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiVXNlciBDb21laWEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyX2NvbWVpYSIsImdpdmVuX25hbWUiOiJVc2VyIiwiZmFtaWx5X25hbWUiOiJDb21laWEiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIn0.bCkfI5dyRQZKMUWFMcMgONNTLwUyT_dHKLG-nCsVzfhNeq8nxz6bJpjjI_ZasZYoRWXQExCkgvxpVSBYi7AeakQnlc77CKVrie1BRC2mX4f0obdBNBPQj-9mhaZLPSAJZSI9MIz2DRAKGAfRa6-Lv2rVGJAoabFgHAYO_1tu0izspeoGWDtX9f5CxOOl-MjqY779m5BP_ZJul0muqTs582TM3e3_3lRNMjwGk29EHPJBT337SlWkZaj8h1OZ4VVoyvxf22w2IJa6mrZ_rnLt11OPPibFp6NoiyAL_BGN3fq-9k8MTdmsKU70fxfCxXkTT5v-4y8xCBzMpEIpDbI3Ig",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1\r\n            },\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Backend_url}}/api/v1/sales",
+									"host": [
+										"{{Backend_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sales"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PutSales",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1RElsMXhhVkNyVUw4N2p3ZmdhTmFFVldjM3FpN3FWRmcyNnZzb2JxWDhRIn0.eyJleHAiOjE3MTAxOTE1MDMsImlhdCI6MTcxMDE5MTIwMywianRpIjoiMmJmN2E0YjMtMDBiNC00YWNiLThmMWEtZDA4YzJlMzQ2NDI0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9jb21laWEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiNGYyNDNkMzctZDIxOC00YTVmLThmZjAtMGJmYzgxZjg5MTIxIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBwX2NvbWVpYSIsInNlc3Npb25fc3RhdGUiOiI3N2FlMGYzYS01OWE4LTQyOTYtYTlhMi1kNjM1N2RjMjA5MTMiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY29tZWlhIiwidW1hX2F1dGhvcml6YXRpb24iLCJVU0VSIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiNzdhZTBmM2EtNTlhOC00Mjk2LWE5YTItZDYzNTdkYzIwOTEzIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiVXNlciBDb21laWEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyX2NvbWVpYSIsImdpdmVuX25hbWUiOiJVc2VyIiwiZmFtaWx5X25hbWUiOiJDb21laWEiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIn0.bCkfI5dyRQZKMUWFMcMgONNTLwUyT_dHKLG-nCsVzfhNeq8nxz6bJpjjI_ZasZYoRWXQExCkgvxpVSBYi7AeakQnlc77CKVrie1BRC2mX4f0obdBNBPQj-9mhaZLPSAJZSI9MIz2DRAKGAfRa6-Lv2rVGJAoabFgHAYO_1tu0izspeoGWDtX9f5CxOOl-MjqY779m5BP_ZJul0muqTs582TM3e3_3lRNMjwGk29EHPJBT337SlWkZaj8h1OZ4VVoyvxf22w2IJa6mrZ_rnLt11OPPibFp6NoiyAL_BGN3fq-9k8MTdmsKU70fxfCxXkTT5v-4y8xCBzMpEIpDbI3Ig",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 2\r\n            },\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Backend_url}}/api/v1/sales/1",
+									"host": [
+										"{{Backend_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sales",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Sales",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1RElsMXhhVkNyVUw4N2p3ZmdhTmFFVldjM3FpN3FWRmcyNnZzb2JxWDhRIn0.eyJleHAiOjE3MTAxOTE1OTcsImlhdCI6MTcxMDE5MTI5NywianRpIjoiMWVmNDM0YWUtMTI0Yy00ZjE2LWFmYWEtNjdkNDc5ZmQxMTJjIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9jb21laWEiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiM2EyNDUzNTgtM2Y0Ni00NTFhLWFmMGEtNjQ5NzQxYmJhNjAyIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYXBwX2NvbWVpYSIsInNlc3Npb25fc3RhdGUiOiI5OThlMWI5Ni0wMDdmLTQ2ODQtYmQ4Mi03MzZmNWI0YjQ3MTYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIi8qIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY29tZWlhIiwidW1hX2F1dGhvcml6YXRpb24iLCJBRE1JTiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6Ijk5OGUxYjk2LTAwN2YtNDY4NC1iZDgyLTczNmY1YjRiNDcxNiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IkFkbWluIENvbWVpYSIsInByZWZlcnJlZF91c2VybmFtZSI6ImFkbWluX2NvbWVpYSIsImdpdmVuX25hbWUiOiJBZG1pbiIsImZhbWlseV9uYW1lIjoiQ29tZWlhIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20ifQ.K8eXqqu6DRLrXlET_sJCZGZDBPm2Dyey7lg0SjoRAVRxssez0eOobvOp6aO4yFFvV4g4S8RJGI1wGsqmbsOTU_jwAkw2-4JuAVUXfXlIYaV46H4j09LfR7Yo9DQUd1L_9hSW0qE7n_PmMjolkAFtXRm-WOrLf0aKyDVMqO-GG5XljPDGxCTJMNmGJAczP2iknH5zvzDFwTItuYr_K4WmQiZ95p46LZESFn5ps8YpuZyRiWA2bm-78w_6fEAPiR-oGY5L9R4ediJt-Q7UaQyHGmGONF8mX0CHNWm_6AZGwffhRlGQ7pY9_l8IWUurHgoyteXMmvd0XnhVVQtg8cxvkg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Backend_url}}/api/v1/sales/1",
+									"host": [
+										"{{Backend_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"sales",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Keycloak",
+					"item": [
+						{
+							"name": "Login Authorization User",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "password_credentials",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "Qhcd4R9um5xC1P5R27BmcXiVDcirMXIc",
+											"type": "string"
+										},
+										{
+											"key": "refreshTokenUrl",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8080/realms/comeia/protocol/openid-connect/token/",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "user",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "user_comeia",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "app_comeia",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:8080/realms/comeia/protocol/openid-connect/token/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"realms",
+										"comeia",
+										"protocol",
+										"openid-connect",
+										"token",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login Authorization Admin",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin_comeia",
+											"type": "string"
+										},
+										{
+											"key": "client_authentication",
+											"value": "body",
+											"type": "string"
+										},
+										{
+											"key": "grant_type",
+											"value": "password_credentials",
+											"type": "string"
+										},
+										{
+											"key": "clientSecret",
+											"value": "Qhcd4R9um5xC1P5R27BmcXiVDcirMXIc",
+											"type": "string"
+										},
+										{
+											"key": "refreshTokenUrl",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "accessTokenUrl",
+											"value": "http://localhost:8080/realms/comeia/protocol/openid-connect/token/",
+											"type": "string"
+										},
+										{
+											"key": "clientId",
+											"value": "app_comeia",
+											"type": "string"
+										},
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:8080/realms/comeia/protocol/openid-connect/token/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"realms",
+										"comeia",
+										"protocol",
+										"openid-connect",
+										"token",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
