@@ -5,6 +5,7 @@ import com.comeia.comeialabs.modules.products.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<List<Product>> listProducts(){
         List<Product> Products = productService.listProducts();
 
@@ -28,6 +30,7 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<Product> updateProduct(@PathVariable Long id, @RequestBody Product ProductUpdated){
 
         try {
@@ -40,6 +43,7 @@ public class ProductController {
     }
 
     @PostMapping
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<Product> createProduct(@RequestBody Product Product){
         try {
             Product newProduct = productService.createProduct(Product);
@@ -50,6 +54,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasRole('USER')")
     public ResponseEntity<Product> getProduct(@PathVariable Long id){
 
         try {
@@ -60,7 +65,8 @@ public class ProductController {
         }
     }
 
-    @DeleteMapping
+    @RequestMapping(value = "{id}", method=RequestMethod.DELETE)
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id){
         try {
             productService.deleteProduct(id);

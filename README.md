@@ -22,3 +22,21 @@ Nota: Para obter mais informações sobre determinadas credenciais, consulte o a
 Você pode acessar a documentação da API através do seguinte link: [http://localhost:8085/swagger-ui/index.html#/](http://localhost:8085/swagger-ui/index.html#/).
 
 Lá estarão listados todos os endpoints criados para o funcionamento desta aplicação.
+
+
+## Configuração do Keycloak
+
+Para que você possa utilizar o KeyCloack deve primeiro instalar e configurar em sua máquina utilizando esse comando em docker `docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:24.0.1 start-dev`
+
+Ao executar este comando, o Keycloak estará disponível com o usuário e senha de administrador definidos como admin, acessível na porta 8080.
+
+Após acessar o menu do Keycloak, siga as etapas de configuração abaixo:
+- Criar um Realm (comeia)
+- Criar um cliente chamado (app_comeia): Certifique-se de habilitar a opção de Client authentication nas configurações de Capability.
+- Criar as roles (ADMIN e USER)
+- Criar os usuários (admin_comeia e user_comeia): Preencha todas as informações necessárias do usuário.
+- Para obter um token de acesso, é necessário fazer uma requisição POST passando as informações de autorização OAuth 2.0 para o Keycloak na seguinte URL: `http://localhost:8080/realms/comeia/protocol/openid-connect/token/`
+
+Isso retornará um token Bearer Token, que será necessário para utilizar os endpoints da aplicação.
+
+Observação: Apenas o usuário ADMIN tem permissão para fazer requisições de DELETE em Product ou Sale.
