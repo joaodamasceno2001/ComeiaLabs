@@ -23,6 +23,7 @@ Você pode acessar a documentação da API através do seguinte link: [http://lo
 
 Lá estarão listados todos os endpoints criados para o funcionamento desta aplicação.
 
+Foi Deixando também um arquivo chamado `ComeiaLabs - Vendas.postman_collection.json` na raiz do projeto contendo todos end point salvos no json e as configurações para conseguir o token usando Keycloak
 
 ## Configuração do Keycloak
 
