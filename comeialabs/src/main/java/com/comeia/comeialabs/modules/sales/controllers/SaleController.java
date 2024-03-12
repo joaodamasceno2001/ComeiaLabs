@@ -18,14 +18,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/sales")
 @Slf4j
-@Tag(name = "comeia-labs")
+@Tag(name = "Sale Controller", description = "API for ComeiaLabs")
 public class SaleController {
 
     @Autowired
     private SaleService saleService;
 
     @GetMapping
-    @PreAuthorize("hasRole('USER')")
+//    @PreAuthorize("hasRole('USER')")
     @Operation(summary = "List Sales", description = "Get a list of all sales")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "List of sales retrieved successfully"),
