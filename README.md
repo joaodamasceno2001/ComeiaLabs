@@ -8,6 +8,7 @@ Para iniciar a aplicação, você precisa ter:
 - Java versão 21 instalada
 - Docker
 - Um editor de código de sua preferência
+- Uma ferramenta para administrar bancos de dados (Ex: DBeaver)
 
 ## Como iniciar
 
