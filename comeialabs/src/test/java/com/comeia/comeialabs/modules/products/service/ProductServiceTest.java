@@ -32,6 +32,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should list products")
     void listProducts() {
         List<Product> products = new ArrayList<>();
         products.add(new Product(1L, "Product 1", 100));
@@ -45,6 +46,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should update product when product exists")
     void updateProduct_productExists() throws Exception {
         Long id = 1L;
         Product updatedProduct = new Product(1L, "Updated Product", 150);
@@ -61,6 +63,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should throw exception when updating product if product not found")
     void updateProduct_productNotFound() {
         Long id = 1L;
         Product updatedProduct = new Product(1L, "Updated Product", 150);
@@ -83,6 +86,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should get product when product exists")
     void getProduct_productExists() throws Exception {
         Long id = 1L;
         Product product = new Product(id, "Test Product", 500);
@@ -95,6 +99,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should throw exception when getting product if product not found")
     void getProduct_productNotFound() {
         Long id = 1L;
 
@@ -104,6 +109,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should delete product successfully")
     void deleteProduct() {
         Long id = 1L;
 
